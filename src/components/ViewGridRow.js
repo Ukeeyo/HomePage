@@ -32,6 +32,11 @@ class ViewGridRow extends React.Component {
                   <Image src={tileModel.img.src} {...tileModel.img.props} />
                 </Row>
               ) : null}
+              {tileModel.paragraph ? (
+                <Row {...tileModel.paragraph.content}>
+                  <p>{tileModel.paragraph.content}</p>
+                </Row>
+              ) : null}
               {tileModel.bottomText ? (
                 <Row style={tileModel.bottomText.style}>
                   {" "}

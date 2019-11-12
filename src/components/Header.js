@@ -39,7 +39,7 @@ class Header extends React.Component {
 
     return (
       <Container style={containerStyle}>
-        <h2 style={titleStyle}>Hello + {audience}</h2>
+        <h2 style={titleStyle}>Yukio Marshal Rattai{audience ? `+ ${audience}` : ""}</h2>
         <Accordion style={accordionStyle}>
           <Card style={cardStyle}>
             <Accordion.Toggle as={Card.Header} eventKey="0">
