@@ -82,6 +82,18 @@ const generateResumeRows = () => {
     headerRow,
     [
       {
+        topText: "Experience",
+        style: {
+          backgroundColor: "rgba(0, 0, 0, 0.7)",
+          color: "white",
+          fontSize: 20,
+          padding: 15,
+          marginBottom: 10
+        }
+      }
+    ],
+    [
+      {
         topText: "Entry1",
         style: {
           color: "white",
@@ -112,6 +124,18 @@ const generateResumeRows = () => {
         },
         style: {
           color: "white"
+        }
+      }
+    ],
+    [
+      {
+        topText: "Education",
+        style: {
+          backgroundColor: "rgba(0, 0, 0, 0.7)",
+          color: "white",
+          fontSize: 20,
+          padding: 15,
+          marginBottom: 10
         }
       }
     ]
