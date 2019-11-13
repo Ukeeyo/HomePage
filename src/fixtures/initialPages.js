@@ -56,7 +56,10 @@ const generateSEPages = params => {
       },
       {
         pageTitle: "Resume",
-        rows: generateResumeRows()
+        rows: generateResumeRows(),
+        style: {
+          backgroundColor: `rgba(0, 0, 0, ${Math.random() * (max - min) + min})`
+        }
       }
     ]
   }
@@ -76,60 +79,66 @@ const generateResumeRows = () => {
     }
   ]
   return [
-  	headerRow,
-  	[
-  	{
-  		topText: "Entry1",
-  		style: {
-  			backgroundColor: `rgba(0, 0, 0, ${Math.random() * (max - min) + min})`,
-  			color: "white",
-  			fontSize: "25px",
-  			marginTop: "auto",
-			marginBottom: "auto"
-  		},
-  	},
-  	{
-  		img: {
-  			src: "http://lorempixel.com/200/200/",
-  			props: {
-  				fluid: true,
-  				style: {
-  					height: 100,
-  					width: 100
-  				}
-  			}
-  		},
-  	},
-  	{
-  		paragraph: {
-  			content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-  		}
-  	}
-  	]
-  	// {
-   //    topText: 'Entry 1',
-   //    style: {
-   //      backgroundColor: `rgba(0, 0, 0, ${Math.random() * (max - min) + min})`,
-   //      color: "white",
-   //      fontSize: "25px",
-   //      padding: 15
-   //    },
-   //    img: {
-   //      src: '',
-   //      props: {
-   //        fluid: true,
-   //        roundedCircle: true,
-   //        style: {
-   //          height: 100,
-   //          width: 100
-   //        }
-   //      }
-   //    },
-   //    bottomText: {
-   //      // style: { paddingLeft: `${graphValue - 10}%` },
-   //      // content: `${graphValue}%`
-   //    }
-   //  }
+    headerRow,
+    [
+      {
+        topText: "Entry1",
+        style: {
+          color: "white",
+          fontSize: "25px",
+          marginTop: "auto",
+          marginBottom: "auto"
+        }
+      },
+      // {
+      // img: {
+      // 	src: "http://lorempixel.com/200/200/",
+      // 	props: {
+      // 		fluid: true,
+      // 		style: {
+      // 			height: 100,
+      // 			width: 100
+      // 		}
+      // 	}
+      // },
+      // },
+      {
+        paragraph: {
+          content:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        props: {
+          xs: 8
+        },
+        style: {
+          color: "white"
+        }
+      }
+    ]
+    // {
+    //    topText: 'Entry 1',
+    //    style: {
+    //      backgroundColor: `rgba(0, 0, 0, ${Math.random() * (max - min) + min})`,
+    //      color: "white",
+    //      fontSize: "25px",
+    //      padding: 15
+    //    },
+    //    img: {
+    //      src: '',
+    //      props: {
+    //        fluid: true,
+    //        roundedCircle: true,
+    //        style: {
+    //          height: 100,
+    //          width: 100
+    //        }
+    //      }
+    //    },
+    //    bottomText: {
+    //      // style: { paddingLeft: `${graphValue - 10}%` },
+    //      // content: `${graphValue}%`
+    //    }
+    //  }
   ]
 }
 

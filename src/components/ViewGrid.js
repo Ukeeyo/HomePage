@@ -124,7 +124,11 @@ const generatePage = (pageModel, pageIndex, activeIndex, visible) => {
       className={PAGE_CLASS_NAME}
       id={`page-${pageIndex}`}
       key={`page-${pageIndex}`}
-      style={{ ...pageStyle, ...{ opacity: visible ? 1 : 0 } }}
+      style={{
+        ...pageModel.style,
+        ...pageStyle,
+        ...{ opacity: visible ? 1 : 0 }
+      }}
     >
       {rows}
     </Container>

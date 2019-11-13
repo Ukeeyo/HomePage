@@ -20,6 +20,7 @@ class ViewGridRow extends React.Component {
             <Col
               style={{ ...pageColStyle, ...tileModel.style }}
               key={`tile-${i}`}
+              {...tileModel.props}
             >
               {tileModel.topText ? (
                 <Row className="justify-content-center">
