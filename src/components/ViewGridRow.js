@@ -20,6 +20,7 @@ class ViewGridRow extends React.Component {
             <Col
               style={{ ...pageColStyle, ...tileModel.style }}
               key={`tile-${i}`}
+              {...tileModel.props}
             >
               {tileModel.topText ? (
                 <Row className="justify-content-center">
@@ -30,6 +31,11 @@ class ViewGridRow extends React.Component {
               {tileModel.img ? (
                 <Row className="justify-content-center">
                   <Image src={tileModel.img.src} {...tileModel.img.props} />
+                </Row>
+              ) : null}
+              {tileModel.paragraph ? (
+                <Row {...tileModel.paragraph.content}>
+                  <p>{tileModel.paragraph.content}</p>
                 </Row>
               ) : null}
               {tileModel.bottomText ? (
