@@ -23,9 +23,8 @@ class ViewGridRow extends React.Component {
               {...tileModel.props}
             >
               {tileModel.topText ? (
-                <Row className="justify-content-center">
-                  {" "}
-                  {tileModel.topText}{" "}
+                <Row {...tileModel.topText.props} style={tileModel.topText.style}>
+                  {tileModel.topText.content}
                 </Row>
               ) : null}
               {tileModel.img ? (
@@ -34,14 +33,19 @@ class ViewGridRow extends React.Component {
                 </Row>
               ) : null}
               {tileModel.paragraph ? (
-                <Row {...tileModel.paragraph.content}>
-                  <p>{tileModel.paragraph.content}</p>
+                <Row {...tileModel.paragraph.props}>
+                  <p style={tileModel.paragraph.style}>{tileModel.paragraph.content}</p>
+                </Row>
+              ) : null}
+              {tileModel.list ? (
+                <Row {...tileModel.list.props}>
+                  <p style={tileModel.list.style}>{parseList(tileModel.list.content)}</p>
                 </Row>
               ) : null}
               {tileModel.bottomText ? (
-                <Row style={tileModel.bottomText.style}>
-                  {" "}
-                  {tileModel.bottomText.content}{" "}
+                <Row {...tileModel.bottomText.props} style={tileModel.bottomText.style}>
+                  
+                  {tileModel.bottomText.content}
                 </Row>
               ) : null}
               {tileModel.bottomGraph ? (
@@ -55,5 +59,11 @@ class ViewGridRow extends React.Component {
     return <Row style={pageRowStyle}>{cols}</Row>
   }
 }
+
+const parseList = (p) => {
+  return p.map((line) => {
+    return (<ul><li>{line}</li></ul>);
+  })
+} 
 
 export default ViewGridRow
