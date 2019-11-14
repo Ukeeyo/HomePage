@@ -58,7 +58,7 @@ const generateSEPages = params => {
         pageTitle: "Resume",
         rows: generateResumeRows(),
         style: {
-          backgroundColor: `rgba(0, 0, 0, ${Math.random() * (max - min) + min})`
+          backgroundColor: `rgba(0, 0, 0, 0.6)`
         }
       }
     ]
@@ -68,13 +68,18 @@ const generateSEPages = params => {
 const generateResumeRows = () => {
   const headerRow = [
     {
-      topText: "Resume",
+      topText: {
+        content: "Resume",
+        props: {
+          className: "justify-content-center"
+        }
+      },
       style: {
         backgroundColor: "rgba(0, 0, 0, 0.7)",
         color: "white",
         fontSize: 35,
         padding: 15,
-        marginBottom: 10
+        // marginBottom: 10
       }
     }
   ]
@@ -82,7 +87,12 @@ const generateResumeRows = () => {
     headerRow,
     [
       {
-        topText: "Experience",
+        topText: {
+          content: "Experience",
+          style: {
+            paddingLeft: 20
+          }
+        },
         style: {
           backgroundColor: "rgba(0, 0, 0, 0.7)",
           color: "white",
@@ -94,30 +104,44 @@ const generateResumeRows = () => {
     ],
     [
       {
-        topText: "Entry1",
+        topText: {
+          content: "PlayStation",
+          props: {
+            className: "justify-content-center"
+          }
+        },
+        bottomText: {
+          content: "2015 - present",
+          props: {
+            className: "justify-content-center"
+          }
+        },
         style: {
           color: "white",
           fontSize: "25px",
           marginTop: "auto",
           marginBottom: "auto"
+        },
+        img: {
+          src: "/PlayStation.png",
+          props: {
+            fluid: true,
+            style: {
+              height: 100,
+              width: 100
+            }
+          }
         }
       },
-      // {
-      // img: {
-      // 	src: "http://lorempixel.com/200/200/",
-      // 	props: {
-      // 		fluid: true,
-      // 		style: {
-      // 			height: 100,
-      // 			width: 100
-      // 		}
-      // 	}
-      // },
-      // },
       {
-        paragraph: {
+        list: {
           content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            [
+              "Lead the development and maintenance of applications that shipped to 80 million users",
+              "Continuously analyzed data to ensure the performance and quality of the software that was shipped",
+              "Organized a program that sought to teach employees best practices when working with large datasets",
+              "Performed and monitored A/B testing on new releases"
+            ]
         },
         props: {
           xs: 8
@@ -129,7 +153,12 @@ const generateResumeRows = () => {
     ],
     [
       {
-        topText: "Education",
+        topText: {
+          content: "Education",
+          style: {
+            marginLeft: 20
+          }
+        },
         style: {
           backgroundColor: "rgba(0, 0, 0, 0.7)",
           color: "white",
@@ -138,31 +167,129 @@ const generateResumeRows = () => {
           marginBottom: 10
         }
       }
+    ],
+    [
+      {
+        topText: {
+          content: "Udacity",
+          props: {
+            className: "justify-content-center"
+          }
+        },
+        bottomText: {
+          content: "Data Science",
+          props: {
+            className: "justify-content-center"
+          }
+        },
+        style: {
+          color: "white",
+          fontSize: "25px",
+          marginTop: "auto",
+          marginBottom: "auto"
+        },
+        img: {
+          src: "/Udacity.png",
+          props: {
+            fluid: true,
+            style: {
+              height: 100,
+              width: 100
+            }
+          }
+        }
+      },
+      {
+        paragraph: {
+          content: 'Subjects Studied',
+          style: {
+            fontSize: 20,
+            marginLeft: 10,
+            textDecoration: "underline"
+          }
+        },
+        list: {
+          content:
+            [
+              "Supervised and Unsupervised Learning",
+              "Predictive Modeling",
+              "Machine Learning",
+              "Data Visualization"
+            ],
+            style: {
+              fontSize: 20
+            }
+        },
+        props: {
+          // xs: 8
+        },
+        style: {
+          color: "white"
+        }
+      }
+    ],
+    [
+      {
+        topText: {
+          content: "San Francisco State University",
+          props: {
+            className: "justify-content-center"
+          }
+        },
+        bottomText: {
+          content: "Business Administration",
+          props: {
+            className: "justify-content-center"
+          }
+        },
+        style: {
+          color: "white",
+          fontSize: "25px",
+          marginTop: "auto",
+          marginBottom: "auto"
+        },
+        img: {
+          src: "/SFSU.png",
+          props: {
+            fluid: true,
+            style: {
+              height: 100,
+              width: 100
+            }
+          }
+        }
+      },
+      {
+        paragraph: {
+          content: 'Subjects Studied',
+          style: {
+            fontSize: 20,
+            marginLeft: 10,
+            textDecoration: "underline"
+          }
+        },
+        list: {
+          content:
+            [
+              "Advertising",
+              "Marketing",
+              "Finance",
+              "Management",
+              "Statistics",
+              "Branding"
+            ],
+            style: {
+              fontSize: 20
+            }
+        },
+        props: {
+          // xs: 8
+        },
+        style: {
+          color: "white"
+        }
+      }
     ]
-    // {
-    //    topText: 'Entry 1',
-    //    style: {
-    //      backgroundColor: `rgba(0, 0, 0, ${Math.random() * (max - min) + min})`,
-    //      color: "white",
-    //      fontSize: "25px",
-    //      padding: 15
-    //    },
-    //    img: {
-    //      src: '',
-    //      props: {
-    //        fluid: true,
-    //        roundedCircle: true,
-    //        style: {
-    //          height: 100,
-    //          width: 100
-    //        }
-    //      }
-    //    },
-    //    bottomText: {
-    //      // style: { paddingLeft: `${graphValue - 10}%` },
-    //      // content: `${graphValue}%`
-    //    }
-    //  }
   ]
 }
 
@@ -244,7 +371,12 @@ const generateSkillsRows = () => {
 
   const headerRow = [
     {
-      topText: "Skills",
+      topText: {
+        content: "Skills",
+        props: {
+          className: "justify-content-center"
+        }
+      },
       style: {
         backgroundColor: "rgba(0, 0, 0, 0.7)",
         color: "white",
@@ -261,7 +393,12 @@ const generateSkillsRows = () => {
   skills.forEach(skill => {
     const graphValue = 100 * (skill.graph.value / skill.graph.scale)
     const newTile = {
-      topText: skill.title,
+      topText: {
+        content: skill.title,
+        props: {
+          className: "justify-content-center"
+        }
+      },
       style: {
         backgroundColor: `rgba(0, 0, 0, ${Math.random() * (max - min) + min})`,
         color: "white",

@@ -43,7 +43,7 @@ class Header extends React.Component {
     return (
       <Container style={containerStyle}>
         <h2 style={titleStyle}>
-          Yukio Marshal Rattai{audience ? `+ ${audience}` : ""}
+          Yukio Marshal Rattai{audience ? ` + ${audience}` : ""}
         </h2>
         <Accordion style={accordionStyle}>
           <Card style={cardStyle}>
