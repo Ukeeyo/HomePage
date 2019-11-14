@@ -1,5 +1,6 @@
-import React from 'react';
-import { Container, ButtonGroup, Accordion, Card, Image } from 'react-bootstrap';
+import React from "react"
+import { Container, ButtonGroup, Accordion, Card, Image } from "react-bootstrap"
+
 const containerStyle = {
 	position: 'fixed',
 	height: 75,
@@ -36,27 +37,34 @@ const titleStyle = {
 };
 
 class Header extends React.Component {
-	render() {
-		return(
-		<Container style={containerStyle}>
-		<h2 style={titleStyle}>Yukio Rattai + {this.props.audience}</h2>
-		<Accordion style={accordionStyle}>
-        <Card style={cardStyle}>
-          <Accordion.Toggle as={Card.Header} eventKey="0">
-            <Image style={burgerStyle} src={'https://icon-library.net/images/white-menu-icon-png/white-menu-icon-png-6.jpg'}/>
-          </Accordion.Toggle>
-          <Accordion.Collapse eventKey="0">
-            <Card.Body style={cardBodyStyle}>
-              <ButtonGroup vertical type="checkbox">
-                {this.props.buttons}
-              </ButtonGroup>
-            </Card.Body>
-          </Accordion.Collapse>
-        </Card>
-      </Accordion>
+  render() {
+    const { audience, buttons } = this.props
+
+    return (
+      <Container style={containerStyle}>
+        <h2 style={titleStyle}>
+          Yukio Marshal Rattai{audience ? `+ ${audience}` : ""}
+        </h2>
+        <Accordion style={accordionStyle}>
+          <Card style={cardStyle}>
+            <Accordion.Toggle as={Card.Header} eventKey="0">
+              <Image
+                style={burgerStyle}
+                src="https://icon-library.net/images/white-menu-icon-png/white-menu-icon-png-6.jpg"
+              />
+            </Accordion.Toggle>
+            <Accordion.Collapse eventKey="0">
+              <Card.Body style={cardBodyStyle}>
+                <ButtonGroup vertical type="checkbox">
+                  {buttons}
+                </ButtonGroup>
+              </Card.Body>
+            </Accordion.Collapse>
+          </Card>
+        </Accordion>
       </Container>
-      )
-	}
+    )
+  }
 }
 
-export default Header;
+export default Header
