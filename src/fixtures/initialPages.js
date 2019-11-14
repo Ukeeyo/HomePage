@@ -79,7 +79,7 @@ const generateResumeRows = () => {
         color: "white",
         fontSize: 35,
         padding: 15,
-        // marginBottom: 10
+        borderBottom: "2px solid rgba(255, 255, 255, 0.5)"
       }
     }
   ]
@@ -97,7 +97,7 @@ const generateResumeRows = () => {
           backgroundColor: "rgba(0, 0, 0, 0.7)",
           color: "white",
           fontSize: 20,
-          padding: 15,
+          // padding: 15,
           marginBottom: 10
         }
       }
@@ -156,14 +156,13 @@ const generateResumeRows = () => {
         topText: {
           content: "Education",
           style: {
-            marginLeft: 20
+            paddingLeft: 20,
           }
         },
         style: {
           backgroundColor: "rgba(0, 0, 0, 0.7)",
           color: "white",
           fontSize: 20,
-          padding: 15,
           marginBottom: 10
         }
       }
@@ -225,6 +224,14 @@ const generateResumeRows = () => {
         },
         style: {
           color: "white"
+        }
+      }
+    ],
+    [
+      {
+        style: {
+          borderBottom: "2px solid rgba(255, 255, 255, 0.5)",
+          marginBottom: 20
         }
       }
     ],
