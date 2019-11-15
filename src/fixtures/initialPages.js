@@ -123,7 +123,7 @@ const generateResumeRows = () => {
           marginBottom: "auto"
         },
         img: {
-          src: "/PlayStation.png",
+          src: "PlayStation.png",
           props: {
             fluid: true,
             style: {
@@ -188,7 +188,7 @@ const generateResumeRows = () => {
           marginBottom: "auto"
         },
         img: {
-          src: "/Udacity.png",
+          src: "Udacity.png",
           props: {
             fluid: true,
             style: {
@@ -256,7 +256,7 @@ const generateResumeRows = () => {
           marginBottom: "auto"
         },
         img: {
-          src: "/SFSU.png",
+          src: "SFSU.png",
           props: {
             fluid: true,
             style: {
@@ -304,7 +304,7 @@ const generateSkillsRows = () => {
   const skills = [
     {
       title: "JavaScript",
-      image: "/JavaScript.png",
+      image: "JavaScript.png",
       graph: {
         scale: 10,
         value: 9
@@ -312,7 +312,7 @@ const generateSkillsRows = () => {
     },
     {
       title: "React",
-      image: "/React.png",
+      image: "React.png",
       graph: {
         scale: 10,
         value: 8
@@ -320,7 +320,7 @@ const generateSkillsRows = () => {
     },
     {
       title: "Ember",
-      image: "/Ember.png",
+      image: "Ember.png",
       graph: {
         scale: 10,
         value: 8
@@ -328,7 +328,7 @@ const generateSkillsRows = () => {
     },
     {
       title: "Node",
-      image: "/Node.png",
+      image: "Node.png",
       graph: {
         scale: 10,
         value: 7
@@ -336,7 +336,7 @@ const generateSkillsRows = () => {
     },
     {
       title: "Python",
-      image: "/Python.png",
+      image: "Python.png",
       graph: {
         scale: 10,
         value: 7
@@ -344,7 +344,7 @@ const generateSkillsRows = () => {
     },
     {
       title: "Ruby",
-      image: "/Ruby.png",
+      image: "Ruby.png",
       graph: {
         scale: 10,
         value: 7
@@ -352,7 +352,7 @@ const generateSkillsRows = () => {
     },
     {
       title: "WebPack",
-      image: "/WebPack.png",
+      image: "WebPack.png",
       graph: {
         scale: 10,
         value: 6
@@ -360,7 +360,7 @@ const generateSkillsRows = () => {
     },
     {
       title: "C++",
-      image: "/CPP.png",
+      image: "CPP.png",
       graph: {
         scale: 10,
         value: 5
@@ -368,7 +368,7 @@ const generateSkillsRows = () => {
     },
     {
       title: "R",
-      image: "/R.png",
+      image: "R.png",
       graph: {
         scale: 10,
         value: 6
