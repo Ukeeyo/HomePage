@@ -14,7 +14,8 @@ import Jumbo from "./Jumbo"
 const PAGE_CLASS_NAME = "Jumbo"
 
 const containerStyle = {
-  marginTop: 100
+  maxWidth: '90%',
+  paddingTop: 80
 }
 const pageStyle = {
   transition: "opacity .8s ease-in-out",
@@ -94,11 +95,13 @@ class ViewGridComp extends React.Component {
     })
 
     return (
-      <Container style={containerStyle}>
+      <div>
         <Header buttons={buttons} audience={this.props.header.audience} />
-        <Jumbo header={this.props.header} />
-        {pages}
-      </Container>
+        <Container style={containerStyle} fluid={true}>
+          <Jumbo header={this.props.header} />
+          {pages}
+        </Container>
+      </div>
     )
   }
 }
@@ -129,6 +132,7 @@ const generatePage = (pageModel, pageIndex, activeIndex, visible) => {
         ...pageStyle,
         ...{ opacity: visible ? 1 : 0 }
       }}
+      fluid={true}
     >
       {rows}
     </Container>

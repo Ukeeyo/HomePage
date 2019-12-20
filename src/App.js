@@ -4,11 +4,7 @@ import ViewGrid from "./components/ViewGrid"
 
 class App extends Component {
   render() {
-    return (
-      <Container>
-        <ViewGrid />
-      </Container>
-    )
+	return <ViewGrid />
   }
 }
 

@@ -3,18 +3,16 @@ import { Container, ButtonGroup, Accordion, Card, Image } from "react-bootstrap"
 
 const containerStyle = {
 	position: 'fixed',
-	height: 75,
-  	top: 0,
-  	left: 0,
-  	right: 0,
-  	zIndex: 9001,
+	height: 50,
+  margin: 0,
+  zIndex: 9001,
 	backgroundColor: `rgba(0, 0, 0, 0.9)`,
 	display: 'table',
-	marginTop: 15
+  width: '100%',
+  paddingLeft: 25
 };
 const accordionStyle = {
 	textAlign: 'right',
-  	// position: 'absolute',
   	right: 30
 };
 const cardStyle = {
@@ -31,7 +29,6 @@ const burgerStyle = {
 };
 const titleStyle = {
 	color: 'white',
-	margin: 0,
 	display: 'table-cell',
 	verticalAlign: 'middle'
 };
@@ -41,7 +38,7 @@ class Header extends React.Component {
     const { audience, buttons } = this.props
 
     return (
-      <Container style={containerStyle}>
+      <div style={containerStyle}>
         <h2 style={titleStyle}>
           Yukio Marshal Rattai{audience ? ` + ${audience}` : ""}
         </h2>
@@ -62,7 +59,7 @@ class Header extends React.Component {
             </Accordion.Collapse>
           </Card>
         </Accordion>
-      </Container>
+      </div>
     )
   }
 }
