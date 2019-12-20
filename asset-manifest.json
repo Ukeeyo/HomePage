@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/HomePage/static/js/main.32fbd5ab.chunk.js",
-    "main.js.map": "/HomePage/static/js/main.32fbd5ab.chunk.js.map",
+    "main.js": "/HomePage/static/js/main.2396382d.chunk.js",
+    "main.js.map": "/HomePage/static/js/main.2396382d.chunk.js.map",
     "runtime~main.js": "/HomePage/static/js/runtime~main.dd858cfc.js",
     "runtime~main.js.map": "/HomePage/static/js/runtime~main.dd858cfc.js.map",
-    "static/js/2.5eafa69e.chunk.js": "/HomePage/static/js/2.5eafa69e.chunk.js",
-    "static/js/2.5eafa69e.chunk.js.map": "/HomePage/static/js/2.5eafa69e.chunk.js.map",
+    "static/js/2.de73d792.chunk.js": "/HomePage/static/js/2.de73d792.chunk.js",
+    "static/js/2.de73d792.chunk.js.map": "/HomePage/static/js/2.de73d792.chunk.js.map",
     "index.html": "/HomePage/index.html",
-    "precache-manifest.db72daad266945cef4673dcc7a4b1e93.js": "/HomePage/precache-manifest.db72daad266945cef4673dcc7a4b1e93.js",
+    "precache-manifest.89689390b8fbc49b6e57e15752c96898.js": "/HomePage/precache-manifest.89689390b8fbc49b6e57e15752c96898.js",
     "service-worker.js": "/HomePage/service-worker.js"
   }
 }
