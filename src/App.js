@@ -1,10 +1,9 @@
 import React, { Component } from "react"
-import Container from "react-bootstrap/Container"
-import ViewGrid from "./components/ViewGrid"
+import Main from "./components/Main"
 
 class App extends Component {
   render() {
-	return <ViewGrid />
+	return <Main />
   }
 }
 

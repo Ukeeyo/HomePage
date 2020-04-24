@@ -1,10 +1,7 @@
 import React from "react"
 import { Row, Col, Image } from "react-bootstrap"
-import BottomGraph from "./BottomGraph"
 
-const pageRowStyle = {
-  // overflow: 'hidden'
-}
+// TODO: REMOVE (Only here for debugging)
 const pageColStyle = {
   // border: '1px solid black',
 }
@@ -13,9 +10,6 @@ class ViewGridRow extends React.Component {
   render() {
     const { rowModel } = this.props
     const cols = rowModel.map((tileModel, i) => {
-      switch (tileModel.custComp) {
-        // Leaving this switch in case I want to make custom tiles
-        default:
           return (
             <Col
               style={{ ...pageColStyle, ...tileModel.style }}
@@ -44,25 +38,20 @@ class ViewGridRow extends React.Component {
               ) : null}
               {tileModel.bottomText ? (
                 <Row {...tileModel.bottomText.props} style={tileModel.bottomText.style}>
-                  
                   {tileModel.bottomText.content}
                 </Row>
               ) : null}
-              {tileModel.bottomGraph ? (
-                <BottomGraph {...tileModel.bottomGraph.props} />
-              ) : null}
             </Col>
           )
-      }
     })
 
-    return <Row style={pageRowStyle}>{cols}</Row>
+    return <Row>{cols}</Row>
   }
 }
 
 const parseList = (p) => {
-  return p.map((line) => {
-    return (<ul><li>{line}</li></ul>);
+  return p.map((line, i) => {
+    return (<li key={i}>{line}</li>);
   })
 } 
 

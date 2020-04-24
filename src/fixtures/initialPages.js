@@ -2,40 +2,6 @@ const max = 1
 const min = 0.3
 
 const getInitialPages = () => {
-  const params = getParameters()
-  const { type } = params
-
-  switch (type) {
-    case "ds":
-      return generateDSPages(params)
-    default:
-      return generateSEPages(params)
-  }
-}
-
-const generateDSPages = params => {
-  return {
-    header: {
-      img: {
-        src:
-          "https://s.gravatar.com/avatar/39bef740aee5dd77906f2689d0c17304?s=100",
-        props: {
-          roundedCircle: true
-        }
-      },
-      title: ``,
-      subTitle: "Data Scientist"
-    },
-    pages: [
-      {
-        pageTitle: "Data Science",
-        custComp: "DataSciencePage"
-      }
-    ]
-  }
-}
-
-const generateSEPages = params => {
   return {
     header: {
       img: {
@@ -47,7 +13,6 @@ const generateSEPages = params => {
       },
       title: "Yukio Rattai",
       subTitle: "Software Engineer",
-      audience: params.audience
     },
     pages: [
       {
@@ -144,7 +109,8 @@ const generateResumeRows = () => {
             ]
         },
         props: {
-          xs: 8
+          xs: 8,
+          className: "justify-content-center"
         },
         style: {
           color: "white"
@@ -389,7 +355,6 @@ const generateSkillsRows = () => {
         color: "white",
         fontSize: 35,
         padding: 15,
-        marginBottom: 10
       }
     }
   ]
@@ -446,18 +411,6 @@ const generateSkillsRows = () => {
   })
 
   return rows
-}
-
-function getParameters() {
-  const pairs = window.location.search.slice(1).split("&")
-
-  const result = {}
-  pairs.forEach(function(pair) {
-    pair = pair.split("=")
-    result[pair[0]] = decodeURIComponent(pair[1] || "")
-  })
-
-  return JSON.parse(JSON.stringify(result))
 }
 
 export default getInitialPages()
