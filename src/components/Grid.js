@@ -6,7 +6,8 @@ const style = {
 	gridGap: '1rem',
 	justifyItems: 'center',
 	gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-	paddingTop: '1rem'
+	paddingTop: '1rem',
+	backgroundColor: 'rgba(0,0,0,0.7)',
 }
 
 const techList = [
