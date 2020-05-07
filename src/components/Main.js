@@ -14,8 +14,8 @@ class Main extends React.Component {
     return (
     <div style={backgroundStyle}>
         <SignBoard style={{marginBottom: 25}} title={'Yukio Rattai'} subTitle={'Software Engineer'} />
-        <TextBubble avatar={`${process.env.PUBLIC_URL}/profile.jpg`} content={"Hello there, my name is Yukio. I'm a software engineer."} />
-        <TextBubble reverse={true} avatar={`${process.env.PUBLIC_URL}/avatar-ph.png`} content={"Hi Yukio, I was just wondering about your software experience"} />
+        <TextBubble avatar={`${process.env.PUBLIC_URL}/profile.jpg`} content={"Hello there, my name is Yukio. I'm a software engineer with 5 years of hands on experience"} />
+        <TextBubble reverse={true} avatar={`${process.env.PUBLIC_URL}/avatar-ph.png`} content={"Hi Yukio, would you be able to elaborate more about what you have worked with?"} />
         <TextBubble avatar={`${process.env.PUBLIC_URL}/profile.jpg`} content={"I'm glad you asked! I have listed a few of the technologies that I am familiar with below"} />
         <SignBoard style={{marginTop: 25, marginBottom: 25}} title={'Tech'} subTitle={'A few things I have been known to use'} />
         <Grid />
