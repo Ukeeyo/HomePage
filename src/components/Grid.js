@@ -1,0 +1,66 @@
+import React from "react";
+import GridCard from './GridCard';
+
+const style = {
+	display: 'grid',
+	gridGap: '1rem',
+	justifyItems: 'center',
+	gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+	paddingTop: '1rem'
+}
+
+const techList = [
+	{
+		name: 'JavaScript',
+		img: 'JavaScript.png'
+	},
+	{
+		name: 'React',
+		img: 'React.png'
+	},
+	{
+		name: 'Ember',
+		img: 'Ember.png'
+	},
+	{
+		name: 'Node',
+		img: 'Node.png'
+	},
+	{
+		name: 'Python',
+		img: 'Python.png'
+	},
+	{
+		name: 'Ruby',
+		img: 'Ruby.png'
+	},
+	{
+		name: 'C++',
+		img: 'CPP.png'
+	},
+	{
+		name: 'WebPack',
+		img: 'WebPack.png'
+	},
+	{
+		name: 'R',
+		img: 'R.png'
+	},
+	];
+
+export default class Grid extends React.Component {
+
+	render() {
+		const cards = techList.map((tech, i) => {
+			return (<GridCard key={`${tech.name}-i`} img={`${process.env.PUBLIC_URL}/${tech.img}`} name={tech.name} />)
+		});
+		
+		return (
+			<>
+				<div style={style}>
+					{cards}
+				</div>
+			</>
+		)
+	}
+}
