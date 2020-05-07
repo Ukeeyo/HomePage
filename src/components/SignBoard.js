@@ -1,11 +1,11 @@
 import React from 'react';
+import './CSS/sign-board.css';
 
 const container = {
 	color: 'white',
 	display: 'flex',
   	justifyContent: 'center',
-  	background: `url('${process.env.PUBLIC_URL}/wood.jpg')`,
-  	backgroundSize: 'cover',
+  	backgroundColor: 'rgba(0,0,0,0.8)',
   	borderRadiusBottom: "30%",
   	padding: 25,
 };
@@ -15,13 +15,8 @@ const titleContainer = {
  	display: 'flex',
 };
 
-const titleStyle = {
-	fontSize: 50,
-};
-
 const subTitleStyle = {
 	paddingLeft: 5,
-	fontSize: 20,
 	marginTop: 'auto'
 };
 
@@ -31,8 +26,8 @@ export default class TextBubble extends React.Component {
 		return (
 	      <div style={containerStyle}>
 	        <div style={titleContainer}>
-	      	  <div style={titleStyle}>{this.props.title}</div>
-	      	  <div style={subTitleStyle}>{this.props.subTitle}</div>
+	      	  <div className="sign-board-title" >{this.props.title}</div>
+	      	  <div style={subTitleStyle} className="sign-board-sub-title">{this.props.subTitle}</div>
 	        </div>
 	      </div>
 		)

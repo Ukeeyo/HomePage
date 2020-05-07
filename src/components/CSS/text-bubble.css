@@ -1,0 +1,21 @@
+.text-bubble {
+	font-size: 3vw;
+}
+
+@media (min-width:600px) {
+  .text-bubble {
+    font-size: 3vw;
+  }
+}
+
+@media (min-width:1000px) {
+  .text-bubble {
+    font-size: 2vw;
+  }
+}
+
+@media (min-width:1200px) {
+  .text-bubble {
+    font-size: 1.5vw;
+  }
+}

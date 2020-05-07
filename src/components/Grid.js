@@ -39,14 +39,6 @@ const techList = [
 		name: 'C++',
 		img: 'CPP.png'
 	},
-	{
-		name: 'WebPack',
-		img: 'WebPack.png'
-	},
-	{
-		name: 'R',
-		img: 'R.png'
-	},
 	];
 
 export default class Grid extends React.Component {
