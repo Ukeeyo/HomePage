@@ -7,7 +7,7 @@ import Resume from './Resume'
 const backgroundStyle = {
   minHeight: '100vh',
   background: `url('${process.env.PUBLIC_URL}/blue_ocean.jpeg') no-repeat center center fixed`,
-  // paddingTop: 10
+  backgroundSize: 'cover'
 };
 
 class Main extends React.Component {

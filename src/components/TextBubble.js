@@ -4,6 +4,7 @@ import './CSS/text-bubble.css';
 const profileImageStyle = {
 	borderRadius: '50%',
 	width: 150,
+	height: 150
 };
 
 const ContainerStyle = {
