@@ -1,5 +1,33 @@
+@keyframes slide-in-from-right {
+  from {
+    transform: translate(1000px, 0);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes slide-in-from-left {
+  from {
+    transform: translate(-1000px, 0);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
 .text-bubble {
 	font-size: 3vw;
+}
+
+.bubble-container-reverse {
+  animation: 0.2s slide-in-from-right;
+}
+
+.bubble-container {
+  animation: 0.2s slide-in-from-left;
 }
 
 @media (min-width:600px) {
@@ -11,6 +39,12 @@
 @media (min-width:1000px) {
   .text-bubble {
     font-size: 2vw;
+  }
+  .avatar {
+    margin-left: 50px;
+  }
+  .avatar-reverse {
+    margin-right: 50px;
   }
 }
 

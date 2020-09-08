@@ -1,0 +1,57 @@
+.form-container {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+}
+
+.input-style {
+	background-color: rgba(255,255,255,1);
+	width: 100%;
+	padding-left: 30px;
+	font-size: 3vw;
+	height: 75px;
+	line-height: 100px;
+	outline: none !important;
+    border: none;
+    bottom: 0;
+}
+
+.suggestions {
+	border-top: none;
+	background-color: rgba(255,255,255,0);
+	width: 100px;
+	outline: none !important;
+	border: 2px solid black;;
+	border-top: none;
+	border-bottom: none;
+	border-right: none;
+}
+
+.button-container {
+	background-color: rgba(200,200,200,1);
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.button-container > button:first-child {
+	border: none;
+}
+
+@media (min-width:600px) {
+  .input-style {
+    font-size: 3vw;
+  }
+}
+
+@media (min-width:1000px) {
+  .input-style {
+    font-size: 2vw;
+  }
+}
+
+@media (min-width:1200px) {
+  .input-style {
+    font-size: 1.5vw;
+  }
+}

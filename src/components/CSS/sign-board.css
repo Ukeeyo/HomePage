@@ -2,14 +2,24 @@
 	font-size: 8vw;
 }
 
+.sign-board-sub-title {
+	font-size: 4vw;
+}
+
 @media (min-width:600px) {
   .sign-board-title {
     font-size: 6vw;
+  }
+  .sign-board-sub-title {
+	font-size: 3vw;
   }
 }
 
 @media (min-width:1000px) {
   .sign-board-title {
     font-size: 4vw;
+  }
+  .sign-board-sub-title {
+	font-size: 2vw;
   }
 }
