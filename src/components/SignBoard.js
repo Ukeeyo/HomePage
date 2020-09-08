@@ -17,15 +17,14 @@ const subTitleStyle = {
 
 export default class TextBubble extends React.Component {
   render() {
-    const containerStyle = this.props.style
-      ? { ...container, ...this.props.style }
-      : container
+    const { style, title, subTitle } = this.props
+    const containerStyle = style ? { ...container, ...style } : container
     return (
       <div style={containerStyle}>
         <div>
-          <div className="sign-board-title">{this.props.title}</div>
+          <div className="sign-board-title">{title}</div>
           <div style={subTitleStyle} className="sign-board-sub-title">
-            {this.props.subTitle}
+            {subTitle}
           </div>
         </div>
       </div>

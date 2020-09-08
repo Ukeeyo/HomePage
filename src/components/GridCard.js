@@ -22,10 +22,11 @@ const nameStyle = {
 
 export default class Grid extends React.Component {
   render() {
+    const { img, name } = this.props
     return (
       <div style={cardStyle}>
-        <img style={imgStyle} src={this.props.img} alt="" />
-        <div style={nameStyle}>{this.props.name}</div>
+        <img style={imgStyle} src={img} alt="" />
+        <div style={nameStyle}>{name}</div>
       </div>
     )
   }

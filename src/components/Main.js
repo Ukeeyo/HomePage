@@ -14,17 +14,20 @@ const backgroundStyle = {
 }
 
 class Main extends React.Component {
-  state = {
-    beachLoaded: false,
-    chat: [
-      <TextBubble
-        avatar={`${process.env.PUBLIC_URL}/profile.jpg`}
-        content={
-          "Hello there, my name is Marshall. I'm an experienced Full Stack Developer"
-        }
-        key={0}
-      />
-    ]
+  constructor(props) {
+    super(props)
+    this.state = {
+      beachLoaded: false,
+      chat: [
+        <TextBubble
+          avatar={`${process.env.PUBLIC_URL}/profile.jpg`}
+          content={
+            "Hello there, my name is Marshall. I'm an experienced Full Stack Developer"
+          }
+          key={0}
+        />
+      ]
+    }
   }
 
   componentDidMount() {
@@ -36,35 +39,22 @@ class Main extends React.Component {
       img.src = preloadImg.src
       const newState = {}
       newState[preloadImg.name] = true
-      img.onerror = x => {
+      img.onerror = err => {
+        console.error(err)
         this.setState(newState)
       }
-      img.onload = x => {
+      img.onload = () => {
         this.setState(newState)
       }
       this.renderFollowUp(`Ask me about my "Skills", or "Resume"`, 1000)
     })
   }
 
-  renderFollowUp(text, timeout, comp) {
-    setTimeout(() => {
-      this.updateChat(text, true)
-    }, timeout)
-    if (comp) {
-      setTimeout(() => {
-        this.addContent(comp);
-      }, 3000)
-    }
-  }
-
   addContent(comp) {
     this.setState(state => {
       return {
         ...state,
-        chat: [
-          ...state.chat,
-          comp
-        ]
+        chat: [...state.chat, comp]
       }
     })
   }
@@ -88,34 +78,45 @@ class Main extends React.Component {
       }
     })
     if (!host) {
-      const response = this.generateResponse(newText);
-      this.renderFollowUp(response.text, 1000, response.comp);
+      const response = this.generateResponse(newText)
+      this.renderFollowUp(response.text, 1000, response.comp)
     }
   }
 
   generateResponse(response) {
-    const intent = ResponseParser.getIntent(response);
-    if (intent === 'skills') {
+    const intent = ResponseParser.getIntent(response)
+    if (intent === "skills") {
       return {
         text: `Let me get a list of Marshall's skills for you`,
-        comp: (<>
-                <SignBoard title={'Tech'} subTitle={'A few things I have been known to use'} />
-                <Grid />
-              </>)
+        comp: (
+          <>
+            <SignBoard
+              title="Tech"
+              subTitle="A few things I have been known to use"
+            />
+            <Grid />
+          </>
+        )
       }
     }
-    if (intent === 'resume') {
+    if (intent === "resume") {
       return {
         text: `I'll pull up that resume for you, one moment...`,
-        comp: (<>
-                <SignBoard title={'Resume'} subTitle={'recent work experience + education'} />
-                <Resume />
-              </>)
+        comp: (
+          <>
+            <SignBoard
+              title="Resume"
+              subTitle="recent work experience + education"
+            />
+            <Resume />
+          </>
+        )
       }
     }
-    if (intent === 'contact') {
+    if (intent === "contact") {
       return {
-        text: 'Great! You can reach out at any time via email at Marshall.Rattai@gmail.com, excited to hear from you."'
+        text:
+          'Great! You can reach out at any time via email at Marshall.Rattai@gmail.com, excited to hear from you."'
       }
     }
     return {
@@ -123,15 +124,27 @@ class Main extends React.Component {
     }
   }
 
+  renderFollowUp(text, timeout, comp) {
+    setTimeout(() => {
+      this.updateChat(text, true)
+    }, timeout)
+    if (comp) {
+      setTimeout(() => {
+        this.addContent(comp)
+      }, 3000)
+    }
+  }
+
   render() {
-    if (!this.state.beachLoaded) {
+    const { beachLoaded, chat } = this.state
+    if (!beachLoaded) {
       // TODO Put a spinner here.
       return null
     }
     return (
       <div style={backgroundStyle}>
         <SignBoard title="Marshall Yukio Rattai" subTitle="Software Engineer" />
-        <Chat chat={this.state.chat} />
+        <Chat chat={chat} />
         <Input
           onSubmit={newText => {
             this.updateChat(newText)

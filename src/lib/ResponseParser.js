@@ -7,5 +7,6 @@ export default {
         return this.INTENTS[i]
       }
     }
+    return "help"
   }
 }

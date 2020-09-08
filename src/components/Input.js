@@ -8,8 +8,8 @@ export default class Input extends React.Component {
   }
 
   addTextToChat(text) {
-    const { onSubmit } = this.props;
-    onSubmit(text);
+    const { onSubmit } = this.props
+    onSubmit(text)
   }
 
   render() {

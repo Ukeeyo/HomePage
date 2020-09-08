@@ -14,17 +14,20 @@
 	outline: none !important;
     border: none;
     bottom: 0;
+    font-size: 4vw;
 }
 
 .suggestions {
 	border-top: none;
 	background-color: rgba(255,255,255,0);
-	width: 100px;
+	/*width: 100px;*/
 	outline: none !important;
 	border: 2px solid black;;
 	border-top: none;
 	border-bottom: none;
 	border-right: none;
+	font-size: 3vw;
+	flex-grow: 1;
 }
 
 .button-container {
@@ -32,26 +35,38 @@
 	width: 100%;
 	padding-top: 5px;
 	padding-bottom: 5px;
+	display: flex;
+	justify-content: space-evenly;
 }
 
 .button-container > button:first-child {
 	border: none;
 }
 
-@media (min-width:600px) {
+/*@media (min-width:600px) {
   .input-style {
-    font-size: 3vw;
+    font-size: 4vw;
   }
-}
+  .suggestions {
+    font-size: 3vw;
+    width: 150px;
+  }
+}*/
 
 @media (min-width:1000px) {
   .input-style {
+    font-size: 2vw;
+  }
+  .suggestions {
     font-size: 2vw;
   }
 }
 
 @media (min-width:1200px) {
   .input-style {
+    font-size: 1.5vw;
+  }
+  .suggestions {
     font-size: 1.5vw;
   }
 }

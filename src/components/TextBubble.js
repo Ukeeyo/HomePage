@@ -27,25 +27,24 @@ const textBubble = {
 
 export default class TextBubble extends React.Component {
   render() {
+    const { style, reverse, avatar, content } = this.props
     return (
       <div
         style={{
           ...ContainerStyle,
-          ...this.props.style,
-          flexDirection: this.props.reverse ? "row-reverse" : "row"
+          ...style,
+          flexDirection: reverse ? "row-reverse" : "row"
         }}
-        className={
-          this.props.reverse ? "bubble-container-reverse" : "bubble-container"
-        }
+        className={reverse ? "bubble-container-reverse" : "bubble-container"}
       >
         <img
-          src={this.props.avatar}
+          src={avatar}
           style={profileImageStyle}
           alt=""
-          className={this.props.reverse ? "avatar-reverse" : "avatar"}
+          className={reverse ? "avatar-reverse" : "avatar"}
         />
         <div style={textBubble} className="text-bubble">
-          {this.props.content}
+          {content}
         </div>
       </div>
     )

@@ -7,7 +7,8 @@ const style = {
   justifyItems: "center",
   gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
   paddingTop: "1rem",
-  backgroundColor: "rgba(0,0,0,0.7)"
+  backgroundColor: "rgba(0,0,0,0.7)",
+  paddingBottom: 20
 }
 
 const techList = [
@@ -43,7 +44,7 @@ const techList = [
 
 export default class Grid extends React.Component {
   render() {
-    const cards = techList.map((tech, i) => {
+    const cards = techList.map(tech => {
       return (
         <GridCard
           key={`${tech.name}-i`}
