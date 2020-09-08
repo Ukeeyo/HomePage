@@ -22,12 +22,15 @@
 	font-size: 3vw;
 }
 
+/*TODO: Figure out why slide-in from right is janky on mobile*/
 .bubble-container-reverse {
-  animation: 0.2s slide-in-from-right;
+  animation: 0.2s slide-in-from-left;
+  will-change: transform, translate;
 }
 
 .bubble-container {
   animation: 0.2s slide-in-from-left;
+  will-change: transform, translate;
 }
 
 @media (min-width:600px) {
