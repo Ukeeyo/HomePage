@@ -1,5 +1,5 @@
 .form-container {
-	position: fixed;
+	position: sticky;
 	width: 100%;
 	bottom: 0;
 }
@@ -9,8 +9,7 @@
 	width: 100%;
 	padding-left: 30px;
 	font-size: 3vw;
-	height: 75px;
-	line-height: 100px;
+	height: 125px;
 	outline: none !important;
     border: none;
     bottom: 0;
@@ -30,7 +29,7 @@
 	flex-grow: 1;
 }
 
-.button-container {
+.suggestion-button-container {
 	background-color: rgba(200,200,200,1);
 	width: 100%;
 	padding-top: 5px;
@@ -39,19 +38,9 @@
 	justify-content: space-evenly;
 }
 
-.button-container > button:first-child {
+.suggestion-button-container > button:first-child {
 	border: none;
 }
-
-/*@media (min-width:600px) {
-  .input-style {
-    font-size: 4vw;
-  }
-  .suggestions {
-    font-size: 3vw;
-    width: 150px;
-  }
-}*/
 
 @media (min-width:1000px) {
   .input-style {

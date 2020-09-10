@@ -10,7 +10,9 @@ import ResponseParser from "../lib/ResponseParser"
 const backgroundStyle = {
   minHeight: "100vh",
   background: `url('${process.env.PUBLIC_URL}/blue_ocean.jpeg') no-repeat center center fixed`,
-  backgroundSize: "cover"
+  backgroundSize: "cover",
+  display: 'flex',
+  flexDirection: 'column'
 }
 
 class Main extends React.Component {
@@ -46,7 +48,7 @@ class Main extends React.Component {
       img.onload = () => {
         this.setState(newState)
       }
-      this.renderFollowUp(`Ask me about my "Skills", or "Resume"`, 1000)
+      this.renderFollowUp(`Ask me about my "Skills", or "Resume" in the chat box below!`, 1000)
     })
   }
 
@@ -116,7 +118,7 @@ class Main extends React.Component {
     if (intent === "contact") {
       return {
         text:
-          'Great! You can reach out at any time via email at Marshall.Rattai@gmail.com, excited to hear from you."'
+          'Great! You can reach out at any time via email at Marshall.Rattai@gmail.com, excited to hear from you.'
       }
     }
     return {

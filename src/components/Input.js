@@ -23,7 +23,7 @@ export default class Input extends React.Component {
           }}
         >
           <div className="chat-input-container">
-            <div className="button-container">
+            <div className="suggestion-button-container">
               <button
                 onClick={() => {
                   this.addTextToChat(`Help!`)

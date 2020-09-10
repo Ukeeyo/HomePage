@@ -14,7 +14,7 @@ export default class Chat extends React.Component {
   render() {
     const { chat } = this.props
     return (
-      <div ref={this.scrollRef} style={{ paddingBottom: 100 }}>
+      <div ref={this.scrollRef} style={{ backgroundColor: "rgba(255,255,255,0.2)", flexGrow: 10 }}>
         {chat}
       </div>
     )

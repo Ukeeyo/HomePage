@@ -9,8 +9,7 @@ const profileImageStyle = {
 
 const ContainerStyle = {
   display: "flex",
-  // padding: 5,
-  backgroundColor: "rgba(255,255,255,0.5)",
+  // backgroundColor: "rgba(255,255,255,0.5)",
   paddingTop: 25,
   paddingBottom: 40
 }

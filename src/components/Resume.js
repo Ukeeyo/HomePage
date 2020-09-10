@@ -10,7 +10,7 @@ const container = {
 }
 const resumeItem = {
   display: "flex",
-  justifyContent: "space-between"
+
 }
 const imgStyle = {
   width: 150,
@@ -23,7 +23,7 @@ export default class Resume extends React.Component {
   render() {
     return (
       <div style={container}>
-        <div style={{ fontSize: 25 }}>Work Experience</div>
+        <div style={{ fontSize: 30, textAlign: 'center' }}>Work Experience</div>
 
         <div style={resumeItem}>
           <div
@@ -43,11 +43,7 @@ export default class Resume extends React.Component {
             <div style={{ textAlign: "center" }}>Playstation</div>
             <div style={{ textAlign: "center" }}>2015 - Present</div>
           </div>
-          <div
-            style={{
-              margin: "auto"
-            }}
-          >
+          <div style={{marginTop: 'auto', marginBottom: 'auto'}}>
             <ul>
               <li>Developed web applications for the PS4 platform</li>
               <li>Created and maintained JS libraries</li>
@@ -62,7 +58,7 @@ export default class Resume extends React.Component {
           </div>
         </div>
 
-        <div style={{ marginTop: 25, fontSize: 25 }}>Education</div>
+        <div style={{ fontSize: 30, textAlign: 'center' }}>Education</div>
 
         <div style={resumeItem}>
           <div
@@ -82,9 +78,7 @@ export default class Resume extends React.Component {
             <div style={{ textAlign: "center" }}>SFSU</div>
           </div>
           <div
-            style={{
-              margin: "auto"
-            }}
+            style={{marginTop: 'auto', marginBottom: 'auto'}}
           >
             Business Administration (B.S.)
           </div>
