@@ -44,15 +44,6 @@ export default class Input extends React.Component {
               </button>
               <button
                 onClick={() => {
-                  this.addTextToChat(`Do you have a resume I could look at?`)
-                }}
-                type="button"
-                className="suggestions"
-              >
-                Resume
-              </button>
-              <button
-                onClick={() => {
                   this.addTextToChat(
                     `I want to talk to the real Marshall, can I get his contact info?`
                   )

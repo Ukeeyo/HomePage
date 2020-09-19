@@ -2,7 +2,6 @@ import React from "react"
 import Grid from "./Grid"
 import TextBubble from "./TextBubble"
 import SignBoard from "./SignBoard"
-import Resume from "./Resume"
 import Input from "./Input"
 import Chat from "./Chat"
 import ResponseParser from "../lib/ResponseParser"
@@ -34,7 +33,9 @@ class Main extends React.Component {
 
   componentDidMount() {
     const preload = [
-      { name: "beachLoaded", src: `${process.env.PUBLIC_URL}/blue_ocean.jpeg` }
+      { name: "beachLoaded", src: `${process.env.PUBLIC_URL}/blue_ocean.jpeg` },
+      { name: "avatar1", src: `${process.env.PUBLIC_URL}/avatar-ph.png` },
+      { name: "avatar2", src: `${process.env.PUBLIC_URL}/profile.jpg` }
     ]
     preload.forEach(preloadImg => {
       const img = new Image()
@@ -48,7 +49,6 @@ class Main extends React.Component {
       img.onload = () => {
         this.setState(newState)
       }
-      this.renderFollowUp(`Ask me about my "Skills", or "Resume" in the chat box below!`, 1000)
     })
   }
 
@@ -101,20 +101,6 @@ class Main extends React.Component {
         )
       }
     }
-    if (intent === "resume") {
-      return {
-        text: `I'll pull up that resume for you, one moment...`,
-        comp: (
-          <>
-            <SignBoard
-              title="Resume"
-              subTitle="recent work experience + education"
-            />
-            <Resume />
-          </>
-        )
-      }
-    }
     if (intent === "contact") {
       return {
         text:
@@ -122,7 +108,7 @@ class Main extends React.Component {
       }
     }
     return {
-      text: `Appologies, My functionality is very limited at the moment, please enter one of the following key words: "Skills", "Resume", or "Contact"`
+      text: `Appologies, My functionality is very limited at the moment, please enter one of the following key words: "Skills", or "Contact"`
     }
   }
 

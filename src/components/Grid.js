@@ -2,9 +2,10 @@ import React from "react"
 import GridCard from "./GridCard"
 
 const style = {
-  display: "grid",
+  display: "flex",
   gridGap: "1rem",
-  justifyItems: "center",
+  justifyContent: "center",
+  flexWrap: 'wrap',
   gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
   paddingTop: "1rem",
   backgroundColor: "rgba(0,0,0,0.7)",
